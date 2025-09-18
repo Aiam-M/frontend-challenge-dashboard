@@ -1,0 +1,148 @@
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-section h2 {
+    align-self: flex-start; /* Corrected from 'left' to 'flex-start' */
+    /*Overwrite the align-items*/
+}
+
+.form {
+    flex-direction: column;
+    display: flex;
+    gap: 1.5rem;
+    width: 80%;
+}
+
+.form fieldset {
+    border: 1px solid rgb(124, 124, 124);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.form legend {
+    color: red;
+    font-weight: bold;
+    padding: 0.4rem;
+}
+
+.form-group label {
+    color: red;
+}
+
+/* ===================================== */
+/* ====== INPUTS & FOCUS STYLES ====== */
+/* ===================================== */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ccc; /* Added a default border for consistency */
+    border-radius: 0.3rem;
+    padding: 0.8rem 1rem; /* Increased padding for better spacing */
+    font-size: 1rem; /* Added a consistent font size */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Added for smooth focus effect */
+}
+
+/* This is the new focus style for all text inputs, selects, and textareas */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none; /* Removes the default browser outline */
+    border-color: #D9232D; /* Changes the border to your brand's red color */
+    box-shadow: 0 0 0 3px rgba(217, 35, 45, 0.2); /* Adds a subtle red "glow" */
+}
+
+.form-group button {
+    margin-top: 1rem;
+    width: 20%;
+    background-color: red;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    border: 2px solid red; /* Changed to use border instead of border-color */
+    transition: all 200ms; /* Simplified transition */
+}
+
+.form-group button:hover {
+    background-color: #9b0d0f;
+    border-color: #9b0d0f;
+    transform: scale(1.05);
+}
+
+/* New focus style for the small button */
+.form-group button:focus {
+    outline: none;
+    border-color: #9b0d0f;
+    box-shadow: 0 0 0 3px rgba(217, 35, 45, 0.2);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.form button[type="submit"] {
+    background-color: red;
+    color: white;
+    width: 100%;
+    padding: 1rem 0px; /* Adjusted padding */
+    border-radius: 0.3rem;
+    cursor: pointer;
+    border: 2px solid red; /* Changed to use border instead of border-color */
+    transition: all 200ms; /* Simplified transition */
+    font-size: 1.1rem; /* Added for better visibility */
+    font-weight: bold; /* Added for emphasis */
+}
+
+.form button[type="submit"]:hover {
+    background-color: #9b0d0f;
+    border-color: #9b0d0f;
+    transform: scale(1.05);
+}
+
+/* New focus style for the main submit button */
+.form button[type="submit"]:focus {
+    outline: none;
+    border-color: #9b0d0f;
+    box-shadow: 0 0 0 3px rgba(217, 35, 45, 0.2);
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form p {
+    font-weight: 500;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+}

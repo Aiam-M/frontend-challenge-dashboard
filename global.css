@@ -1,0 +1,365 @@
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url(fontes/Fontes/Montserrat/static/Montserrat-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Black';
+    src: url(fontes/Fontes/Montserrat/static/Montserrat-Black.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fontes/Fontes/Roboto/static/Roboto-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(fontes/Fontes/Lato/Lato-BoldItalic.ttf) format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    /* Include the margin and padding in the total large of screen*/
+}
+
+body,
+html {
+    /*Use a hundred percent of the screen*/
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    width: 100%;
+    /* Ensure body takes full width */
+}
+
+#Vlinha {
+    height: 35px;
+    /* Altura da linha */
+    border-right: 1px solid white;
+}
+
+#logo {
+    margin-left: 15px;
+    justify-content: left;
+    /* Margem para esquerda pra logo */
+}
+
+@media(max-width: 600px) {
+    #logo {
+        width: 120px;
+        /* Ajusta o tamanho da logo para telas menores */
+    }
+}
+
+.cabeçalho {
+    position: sticky;
+    /* Faz o cabeçalho ficar fixo no topo ao rolar a página */
+    top: 0;
+    /* When the header touch the top of the site, he transform lika a position: Static */
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem a linha se necessário */
+    flex-direction: row;
+    /* Alinha os itens horizontalmente */
+    justify-content: space-between;
+    /* O primeiro item fica colado a esquerda, o ultimo a direota e espaça entre eles*/
+    align-items: center;
+    /* Centraliza verticalmente */
+    font-family: 'Roboto';
+    background-color: white;
+    z-index: 100;
+    /* Ensure that header is above other content */
+}
+
+.login {
+    /* cria um botão de login com margem pro lado direito, distancia entre o login e o sign up e estilização */
+    display: flex;
+    margin: 15px;
+    background-color: red;
+    color: white;
+    gap: 10px;
+    /* Espaço entre os itens */
+    padding: 10px 20px;
+    /* Espaçamento interno(horizontal  vertical)*/
+    border-radius: 25px;
+    /* bordas arredondadas */
+    cursor: pointer;
+    /* cursor de mãozinha */
+    font-weight: bold;
+    /* texto em negrito */
+    font-size: large;
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+.menu ul {
+    /* estilizando o menu */
+    display: flex;
+    align-items: center;
+    /* Centralize vertically */
+    list-style: none;
+    gap: 30px;
+    /* Espaço entre os itens */
+    font-weight: bold;
+    /* texto em negrito */
+    ;
+}
+
+.menu a {
+    display: inline-block;
+    /*transforma o <a> em um elemento híbrido, que aceita propriedades de bloco e de linha */
+    font-size: large;
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+    /*Remove the subline from the link */
+    transition: 200ms;
+    /* Suaviza o efeito */
+}
+
+.menu a:hover {
+    color: rgb(252, 0, 0);
+    /* Muda a cor do texto ao passar o mouse */
+    cursor: pointer;
+    /* cursor de mãozinha */
+    transform: scale(1.5);
+    /* Aumenta o tamanho do botão em 20% */
+}
+
+#menu-icon {
+    display: none;
+    /* Hide the menu icon by default */
+    font-size: 1.8rem;
+    /* Adjust the size as a font of the user */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    color: #333;
+    /* Color of the icon */
+    transition: 200ms;
+    /* Smooth transition for hover effects */
+}
+
+#menu-icon:hover {
+    color: rgb(252, 0, 0);
+    /* Change text color on hover */
+    transform: scale(1.2);
+    /* Increases the icon by 20% */
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: flex;
+        /* Show the menu icon on small screens */
+    }
+    .menu {
+        display: none;
+        /* Hide the menu by default on small screens */
+    }
+}
+
+.Botão {
+    /*Estilizando os botoes do site */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+    transition: 200ms;
+    /* Suaviza o efeito */
+}
+
+.Botão:hover {
+    /* criando uma pseudo classe(uma ação que acontece quando uma condição ocorre, nesse caso o mouse passar em cima) */
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
+    transform: scale(1.3);
+    /* Aumenta o tamanho do botão em 20% */
+}
+
+.Banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    /* The banner height is now flexible to prevent content overflow */
+    min-height: 530px;
+    /* This ensures the banner maintains a minimum height */
+    padding: 2rem 1rem;
+    /* Vertical and horizontal padding creates a safe area for content */
+    box-sizing: border-box;
+    /* This ensures padding is included in the element's total width and height */
+    position: relative;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%), url('Imagens/charlesdeluvio-Lks7vei-eAg-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-family: 'Lato';
+    text-align: center;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    /* This sets a maximum width for content on very large screens for better readability */
+}
+
+.textoBanner1 {
+    font-family: 'Montserrat Black';
+    font-weight: 900;
+    background-color: rgba(255, 0, 0, 0.801);
+    padding: 10px 20px;
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.438);
+}
+
+.textoBanner2 {
+    display: flex;
+    flex-wrap: wrap;
+    /* This allows items to wrap onto the next line on small screens */
+    gap: 2rem;
+    /* This creates a consistent space between the two subtitle columns */
+    width: 100%;
+    justify-content: center;
+    /* This centers the items when they wrap */
+}
+
+.subtituloBanner1,
+.subtituloBanner2 {
+    flex: 1;
+    /* This is the key property that makes both columns share space equally, creating the 'invisible square' */
+    min-width: 280px;
+    /* This defines the minimum width before an item wraps to the next line */
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.438);
+    text-align: justify;
+    /* Force the text align on both of corners */
+    hyphens: auto;
+    /* Allows the browser to put hyphens in texts if necessary */
+}
+
+.subtituloBanner1 {
+    text-align: left;
+}
+
+.subtituloBanner2 {
+    text-align: right;
+}
+
+.subtituloBanner1 h2,
+.subtituloBanner2 h2 {
+    background-color: rgba(255, 0, 0, 0.801);
+    /* The red background is applied directly to the h2 elements */
+    padding: 10px 20px;
+    display: inline-block;
+    /* This makes the background only as wide as the text content plus padding */
+}
+
+.sec-beneficios {
+    margin: 20px 0;
+    /* Vertical margin only, as the full width is desired */
+    padding: 40px 20px;
+    /* More vertical padding for better spacing */
+    background-color: #f4f5f7;
+    /* A slightly softer grey */
+}
+
+
+/* This is the title "Nossos beneficios" */
+
+.sec-beneficios h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    /* Use the base family name */
+    font-weight: 700;
+    /* Use font-weight to specify boldness */
+    margin-bottom: 2rem;
+    /* More space below the title */
+}
+
+
+/* This is the flex container for all the cards */
+
+.benefícios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    /* This creates a consistent space between cards */
+}
+
+
+/* This is the new, unified style for EVERY card */
+
+.beneficio-card {
+    flex: 1;
+    /* Allows the card to grow */
+    min-width: 280px;
+    /* Defines when the card should wrap to the next line */
+    max-width: 350px;
+    /* Prevents the card from getting too wide on large screens */
+    display: flex;
+    flex-direction: column;
+    /* Stacks items vertically inside the card */
+    align-items: center;
+    /* Centers items horizontally */
+    text-align: center;
+    /* Centers the text (h3 and p) */
+    transition: transform 0.2s ease;
+    /* Smooth transition for the hover effect */
+}
+
+.beneficio-card:hover {
+    transform: scale(1.05);
+    /* The hover effect */
+}
+
+
+/* THIS IS THE NEW CONTAINER for the image, acting as a "mold" */
+
+.beneficio-imagem-container {
+    height: 150px;
+    /* A fixed height for all image containers */
+    margin-bottom: 1.5rem;
+    /* Space between the image and the title */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* This styles the image itself to fit inside the container */
+
+.beneficio-imagem-container img {
+    max-height: 100%;
+    /* The image will never be taller than the container */
+    max-width: 100%;
+    /* The image will never be wider than the container */
+    object-fit: contain;
+    /* This scales the image down to fit without distortion */
+}
+
+
+/* Styles for the card's title */
+
+.beneficio-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    /* Use the base family name */
+    font-weight: 700;
+    color: #ED0208;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Styles for the card's paragraph */
+
+.beneficio-card p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    /* Improves readability by increasing space between lines */
+}

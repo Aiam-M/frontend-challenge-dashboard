@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicação</title>
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="Território.css">
+    <link rel="stylesheet" href="indicacao.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ===================================== -->
+    <!-- ====== 1. MAIN DASHBOARD CONTAINER ====== -->
+    <!-- ===================================== -->
+    <div class="dashboard-container">
+        
+        <!-- ===================================== -->
+        <!-- ====== 2. SIDEBAR (LEFT MENU) ====== -->
+        <!-- ===================================== -->
+        <aside class="sidebar">
+
+            <!-- Top section of the sidebar, usually for a logo -->
+            <div class="sidebar-top">
+                <a href="#" class="sidebar-logo">
+                    <!-- Logo could be placed here -->
+                </a>
+            </div>
+
+            <!-- Sidebar navigation -->
+            <nav class="sidebar-nav">
+                <ul>
+                    <!-- Portfolio link -->
+                    <li>
+                        <a href="#"><i class="fas fa-briefcase"></i> Portfólio</a>
+                    </li>
+                    <!-- Active link (highlighted page) -->
+                    <li class="active">
+                        <a href="#"><i class="fas fa-chart-line"></i> Gestão CrossSell</a>
+                    </li>
+                    <!-- Client consultation link -->
+                    <li>
+                        <a href="#"><i class="fas fa-users"></i> Consulta Clientes</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Small footer text inside the sidebar -->
+            <p>Powered By Z</p>
+        </aside>
+
+        <!-- ===================================== -->
+        <!-- ====== 3. MAIN WRAPPER (CONTENT) ====== -->
+        <!-- ===================================== -->
+        <div class="main-wrapper">
+
+            <!-- ===================================== -->
+            <!-- ====== 3.1 HEADER (TOP BAR) ====== -->
+            <!-- ===================================== -->
+            <header class="main-header">
+
+                <!-- Left side: menu button (hamburger icon) -->
+                <div class="header-left">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <!-- Right side: user profile dropdown -->
+                <div class="header-right">
+                    <div class="user-profile">
+                        <p>Nome do Usuário</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ===================================== -->
+            <!-- ====== 3.2 MAIN CONTENT AREA ====== -->
+            <!-- ===================================== -->
+            <main class="main-content">
+
+                <!-- Section for forms -->
+                <section class="form-section">
+                    <h2>Informações de carregamento</h2>
+
+                    <!-- ===================================== -->
+                    <!-- ====== 4. FORM FOR COMPANY DATA ====== -->
+                    <!-- ===================================== -->
+                    <form class="form" id="carregamento">
+
+                        <!-- ====== Fieldset 1: Company CNPJ ====== -->
+                        <fieldset>
+                            <legend>Consultar disponibilidade do CNPJ da Empresa*</legend>
+                            <div class="form-group">
+                                <input type="text" 
+                                       name="cnpjEmpresa" 
+                                       id="cnpjEmpresa" 
+                                       required 
+                                       placeholder="00.000.000/0000-00">
+                            </div>
+                        </fieldset>
+
+                        <!-- ====== Fieldset 2: Ticket Log Indication ====== -->
+                        <fieldset>
+                            <legend>Indicação Ticket Log</legend>
+
+                            <!-- Number of trucks -->
+                            <div class="form-group">
+                                <label for="qtdCaminhoes">Quantidade de caminhões?</label>
+                                <input type="number" name="qtdCaminhoes" id="qtdCaminhoes">
+                            </div>
+
+                            <!-- Number of employees -->
+                            <div class="form-group">
+                                <label for="qtdFuncionarios">Quantos funcionários possui?</label>
+                                <input type="number" name="qtdFuncionarios" id="qtdFuncionarios">
+                            </div>
+
+                            <!-- Heavy vehicles -->
+                            <div class="form-group">
+                                <label for="qtdVeiculosPesados">Quantos veículos pesados (caminhões ou ônibus)?</label>
+                                <input type="number" name="qtdVeiculosPesados" id="qtdVeiculosPesados">
+                            </div>
+
+                            <!-- Fuel subsidy (radio buttons) -->
+                            <div class="form-group">
+                                <label>A empresa subsidia combustível a colaboradores?</label>
+                                <div class="radio-group">
+                                    <label for="subsidiaSim">
+                                        <input type="radio" id="subsidiaSim" name="subsidiaCombustivel" value="sim">
+                                        Sim
+                                    </label>
+                                    <label for="subsidiaNao">
+                                        <input type="radio" id="subsidiaNao" name="subsidiaCombustivel" value="nao" checked>
+                                        Não
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Light vehicles -->
+                            <div class="form-group">
+                                <label for="qtdVeiculosLeves">Quantos veículos leves (automóveis, picapes ou motocicletas)?</label>
+                                <input type="number" name="qtdVeiculosLeves" id="qtdVeiculosLeves">
+                            </div>
+                        </fieldset>
+
+                        <!-- ====== Fieldset 3: General Vehicle Data ====== -->
+                        <fieldset>
+                            <!-- Total vehicles -->
+                            <div class="form-group">
+                                <label for="qtdVeiculosTotal">Quantidade de veículos</label>
+                                <input type="number" name="qtdVeiculosTotal" id="qtdVeiculosTotal">
+                            </div>
+
+                            <!-- Volume forecast -->
+                            <div class="form-group">
+                                <label for="previsaoVolume">Previsão de volume (R$):</label>
+                                <input type="text" name="previsaoVolume" id="previsaoVolume" placeholder="0,00">
+                            </div>
+
+                            <!-- Number of cards -->
+                            <div class="form-group">
+                                <label for="qtdCartoes">Quantidade de cartões*</label>
+                                <input type="number" name="qtdCartoes" id="qtdCartoes" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- ====== Fieldset 4: Observations ====== -->
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="observacoes">Observações (Quantidade máxima de caracteres 4.000)</label>
+                                <textarea name="observacoes" id="observacoes" rows="4" maxlength="4000"></textarea>
+                            </div>
+                        </fieldset>
+
+                        <!-- Submit button -->
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="carregamento.js"></script>
+</body>
+</html>

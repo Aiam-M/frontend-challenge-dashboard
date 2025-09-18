@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicação</title>
+    <link rel="stylesheet" href="Território.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="indicacao.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <a href="#" class="sidebar-logo">
+
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fas fa-briefcase"></i> Portfólio</a>
+                    </li>
+                    <li class="active"> <a href="#"><i class="fas fa-chart-line"></i> Gestão CrossSell</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-users"></i> Consulta Clientes</a>
+                    </li>
+                </ul>
+            </nav>
+            <p>Powered By Z</p>
+        </aside>
+        <div class="main-wrapper">
+            <header class="main-header">
+                <div class="header-left">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <p>Nome do Usuário</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+            <main class="main-content">
+                <section class="form-section">
+                    <h2>Nova indicação de Cross-Selling</h2>
+                    <form class="form" action="carregamento.html">
+                        <fieldset>
+                            <legend>Solicitante</legend>
+                            <p>Nome do usuário</p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Consulta de disponibilidade*</legend>
+                            <div class="form-group">
+                                <label for="CNPJ">CNPJ:</label>
+                                <input type="text" name="CNPJ" id="CNPJ" required maxlength="18">
+                                <button type="button">OK</button>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Cadastro básico*</legend>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="razaoSocial">Razão Social*</label>
+                                    <input type="text" name="razaoSocial" id="razaoSocial" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cep">CEP*</label>
+                                    <input type="text" name="cep" id="cep" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="logradouro">Logradouro*</label>
+                                    <input type="text" name="logradouro" id="logradouro" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="numero">Número</label>
+                                    <input type="text" name="numero" id="numero">
+                                </div>
+                                <div class="form-group">
+                                    <label for="complemento">Complemento</label>
+                                    <input type="text" name="complemento" id="complemento">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bairro">Bairro</label>
+                                    <input type="text" name="bairro" id="bairro">
+                                </div>
+                                <div class="form-group">
+                                    <label for="municipio">Município*</label>
+                                    <input type="text" name="municipio" id="municipio" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="estado">Estado*</label>
+                                    <select name="estado" id="estado" required>
+                                        <option value="">Selecione</option>
+                                        <option value="AC">AC</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AP">AP</option>
+                                        <option value="AM">AM</option>
+                                        <option value="BA">BA</option>
+                                        <option value="CE">CE</option>
+                                        <option value="DF">DF</option>
+                                        <option value="ES">ES</option>
+                                        <option value="GO">GO</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MT">MT</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MG">MG</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PB">PB</option>
+                                        <option value="PR">PR</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PI">PI</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="RN">RN</option>
+                                        <option value="RS">RS</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RR">RR</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SP">SP</option>
+                                        <option value="SE">SE</option>
+                                        <option value="TO">TO</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Contato*</legend>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nome">Nome Completo*</label>
+                                    <input type="text" name="nome" id="nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail*</label>
+                                    <input type="email" name="email" id="email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="telefone">Telefone*</label>
+                                    <input type="tel" name="telefone" id="telefone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cargo">Cargo*</label>
+                                    <select name="cargo" id="cargo" required>
+                                        <option value="">Selecione um cargo</option>
+                                        <option value="Gerente">Gerente</option>
+                                        <option value="Diretor">Diretor</option>
+                                        <option value="Analista">Analista</option>
+                                        <option value="Coordenador">Coordenador</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="departamento">Departamento*</label>
+                                    <select name="departamento" id="departamento" required>
+                                        <option value="">Selecione um departamento</option>
+                                        <option value="Administrativo">Administrativo</option>
+                                        <option value="Financeiro">Financeiro</option>
+                                        <option value="RH">Recursos Humanos</option>
+                                        <option value="Comercial">Comercial</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="celular">Celular</label>
+                                    <input type="tel" name="celular" id="celular">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Indicação*</legend>
+                            <div class="form-group">
+                                <label for="BU">Qual BU voce deseja indicar ou vender?*</label>
+                                <select name="BU" id="BU" required>
+                                    <option value="">Selecione</option>
+                                    <option value="combo">Combo</option>
+                                    <option value="edenred_pay">Edenred Pay</option>
+                                    <option value="gointegro">Gointegro</option>
+                                    <option value="ponto">Ponto</option>
+                                    <option value="repom">Repom</option>
+                                    <option value="ticket_log">Ticket Log</option>
+                                    <option value="ticket_servicos">Ticket Serviços</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ação">Qual ação deseja realizar?*</label>
+                                <select name="ação" id="ação">
+                                    <option value="">Selecione</option>
+                                    <option value="vender">Vender</option>
+                                    <option value="indicar">Indicar</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Selecione os produtos disponíveis*</legend>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="gestaoAbastecimento" name="produto" value="gestao_abastecimento" checked>
+                                <label for="gestaoAbastecimento">Gestão de Abastecimento</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="abastecimento" name="produto" value="abastecimento">
+                                <label for="abastecimento">Abastecimento</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="gestaoManutencao" name="produto" value="gestao_manutencao">
+                                <label for="gestaoManutencao">Gestão de manutenção</label>
+                            </div>
+                        </fieldset>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
