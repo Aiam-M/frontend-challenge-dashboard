@@ -1,179 +1,185 @@
+/* ===================================== */
+/* ====== 1. FONT IMPORTS ====== */
+/* ===================================== */
+
+/* Custom font: Montserrat Bold */
 @font-face {
     font-family: 'Montserrat Bold';
     src: url(fontes/Fontes/Montserrat/static/Montserrat-Bold.ttf) format('truetype');
 }
 
+/* Custom font: Montserrat Black */
 @font-face {
     font-family: 'Montserrat Black';
     src: url(fontes/Fontes/Montserrat/static/Montserrat-Black.ttf) format('truetype');
 }
 
+/* Custom font: Roboto */
 @font-face {
     font-family: 'Roboto';
     src: url('fontes/Fontes/Roboto/static/Roboto-ExtraBoldItalic.ttf') format('truetype');
 }
 
+/* Custom font: Lato */
 @font-face {
     font-family: 'Lato';
     src: url(fontes/Fontes/Lato/Lato-BoldItalic.ttf) format('truetype');
 }
 
+/* ===================================== */
+/* ====== 2. GLOBAL STYLES ====== */
+/* ===================================== */
+
 * {
     box-sizing: border-box;
-    /* Include the margin and padding in the total large of screen*/
+    /* Ensures padding and border are included in element's total width/height */
 }
 
 body,
 html {
-    /*Use a hundred percent of the screen*/
     margin: 0;
-    /* Remove default margin */
+    /* Removes default margin */
     padding: 0;
-    /* Remove default padding */
+    /* Removes default padding */
     width: 100%;
-    /* Ensure body takes full width */
+    /* Makes body span entire viewport width */
 }
+
+/* ===================================== */
+/* ====== 3. HEADER (LOGO + NAVIGATION) ====== */
+/* ===================================== */
 
 #Vlinha {
     height: 35px;
-    /* Altura da linha */
+    /* Vertical line height */
     border-right: 1px solid white;
+    /* Creates a right border that looks like a separator */
 }
 
 #logo {
     margin-left: 15px;
+    /* Adds spacing to the left for logo positioning */
     justify-content: left;
-    /* Margem para esquerda pra logo */
+    /* Ensures logo stays aligned left */
 }
 
 @media(max-width: 600px) {
     #logo {
         width: 120px;
-        /* Ajusta o tamanho da logo para telas menores */
+        /* Shrinks logo size on small screens */
     }
 }
 
 .cabeçalho {
     position: sticky;
-    /* Faz o cabeçalho ficar fixo no topo ao rolar a página */
+    /* Sticks header to the top on scroll */
     top: 0;
-    /* When the header touch the top of the site, he transform lika a position: Static */
     display: flex;
     flex-wrap: wrap;
-    /* Permite que os itens quebrem a linha se necessário */
+    /* Allows wrapping if content overflows */
     flex-direction: row;
-    /* Alinha os itens horizontalmente */
+    /* Aligns header elements in a row */
     justify-content: space-between;
-    /* O primeiro item fica colado a esquerda, o ultimo a direota e espaça entre eles*/
+    /* First item on left, last item on right, space in between */
     align-items: center;
-    /* Centraliza verticalmente */
+    /* Vertically centers elements */
     font-family: 'Roboto';
     background-color: white;
     z-index: 100;
-    /* Ensure that header is above other content */
+    /* Keeps header above other content */
 }
 
 .login {
-    /* cria um botão de login com margem pro lado direito, distancia entre o login e o sign up e estilização */
     display: flex;
     margin: 15px;
     background-color: red;
     color: white;
     gap: 10px;
-    /* Espaço entre os itens */
+    /* Spacing between login and signup buttons/icons */
     padding: 10px 20px;
-    /* Espaçamento interno(horizontal  vertical)*/
     border-radius: 25px;
-    /* bordas arredondadas */
+    /* Rounded corners */
     cursor: pointer;
-    /* cursor de mãozinha */
+    /* Pointer cursor on hover */
     font-weight: bold;
-    /* texto em negrito */
     font-size: large;
     align-items: center;
-    /* Centraliza verticalmente */
+    /* Vertical centering */
 }
 
+/* ===================================== */
+/* ====== 4. NAVIGATION MENU ====== */
+/* ===================================== */
+
 .menu ul {
-    /* estilizando o menu */
     display: flex;
     align-items: center;
-    /* Centralize vertically */
     list-style: none;
     gap: 30px;
-    /* Espaço entre os itens */
+    /* Space between menu items */
     font-weight: bold;
-    /* texto em negrito */
-    ;
 }
 
 .menu a {
     display: inline-block;
-    /*transforma o <a> em um elemento híbrido, que aceita propriedades de bloco e de linha */
+    /* Inline but allows block properties */
     font-size: large;
     color: rgb(56, 56, 56);
     text-decoration: none;
-    /*Remove the subline from the link */
+    /* Removes underline */
     transition: 200ms;
-    /* Suaviza o efeito */
+    /* Smooth hover effect */
 }
 
 .menu a:hover {
     color: rgb(252, 0, 0);
-    /* Muda a cor do texto ao passar o mouse */
     cursor: pointer;
-    /* cursor de mãozinha */
     transform: scale(1.5);
-    /* Aumenta o tamanho do botão em 20% */
+    /* Enlarges link on hover */
 }
 
 #menu-icon {
     display: none;
-    /* Hide the menu icon by default */
+    /* Hidden on large screens */
     font-size: 1.8rem;
-    /* Adjust the size as a font of the user */
     cursor: pointer;
-    /* Change cursor to pointer on hover */
     color: #333;
-    /* Color of the icon */
     transition: 200ms;
-    /* Smooth transition for hover effects */
 }
 
 #menu-icon:hover {
     color: rgb(252, 0, 0);
-    /* Change text color on hover */
     transform: scale(1.2);
-    /* Increases the icon by 20% */
 }
 
+/* Show mobile icon and hide menu on smaller screens */
 @media (max-width: 768px) {
     #menu-icon {
         display: flex;
-        /* Show the menu icon on small screens */
     }
     .menu {
         display: none;
-        /* Hide the menu by default on small screens */
     }
 }
 
+/* ===================================== */
+/* ====== 5. GENERIC BUTTON STYLES ====== */
+/* ===================================== */
+
 .Botão {
-    /*Estilizando os botoes do site */
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
-    /* Remove o sublinhado do link */
     transition: 200ms;
-    /* Suaviza o efeito */
 }
 
 .Botão:hover {
-    /* criando uma pseudo classe(uma ação que acontece quando uma condição ocorre, nesse caso o mouse passar em cima) */
     text-decoration: underline;
-    /* Adiciona sublinhado ao passar o mouse */
     transform: scale(1.3);
-    /* Aumenta o tamanho do botão em 20% */
 }
+
+/* ===================================== */
+/* ====== 6. BANNER SECTION ====== */
+/* ===================================== */
 
 .Banner {
     display: flex;
@@ -181,18 +187,18 @@ html {
     justify-content: center;
     width: 100%;
     height: auto;
-    /* The banner height is now flexible to prevent content overflow */
     min-height: 530px;
-    /* This ensures the banner maintains a minimum height */
+    /* Ensures banner has consistent min height */
     padding: 2rem 1rem;
-    /* Vertical and horizontal padding creates a safe area for content */
     box-sizing: border-box;
-    /* This ensures padding is included in the element's total width and height */
     position: relative;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%), url('Imagens/charlesdeluvio-Lks7vei-eAg-unsplash.jpg');
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, 
+                                          rgba(0, 0, 0, 0.5) 60%, 
+                                          rgba(0, 0, 0, 0) 100%), 
+                url('Imagens/charlesdeluvio-Lks7vei-eAg-unsplash.jpg');
     background-position: center;
     background-size: cover;
-    color: rgb(255, 255, 255);
+    color: white;
     font-family: 'Lato';
     text-align: center;
 }
@@ -204,7 +210,7 @@ html {
     gap: 20px;
     width: 100%;
     max-width: 1200px;
-    /* This sets a maximum width for content on very large screens for better readability */
+    /* Prevents overly stretched content */
 }
 
 .textoBanner1 {
@@ -219,26 +225,21 @@ html {
 .textoBanner2 {
     display: flex;
     flex-wrap: wrap;
-    /* This allows items to wrap onto the next line on small screens */
     gap: 2rem;
-    /* This creates a consistent space between the two subtitle columns */
     width: 100%;
     justify-content: center;
-    /* This centers the items when they wrap */
+    /* Ensures content is centered if wrapped */
 }
 
 .subtituloBanner1,
 .subtituloBanner2 {
     flex: 1;
-    /* This is the key property that makes both columns share space equally, creating the 'invisible square' */
     min-width: 280px;
-    /* This defines the minimum width before an item wraps to the next line */
+    /* Defines wrapping breakpoint */
     font-size: 1.5rem;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.438);
-    text-align: justify;
-    /* Force the text align on both of corners */
     hyphens: auto;
-    /* Allows the browser to put hyphens in texts if necessary */
+    text-align: justify;
 }
 
 .subtituloBanner1 {
@@ -252,114 +253,79 @@ html {
 .subtituloBanner1 h2,
 .subtituloBanner2 h2 {
     background-color: rgba(255, 0, 0, 0.801);
-    /* The red background is applied directly to the h2 elements */
     padding: 10px 20px;
     display: inline-block;
-    /* This makes the background only as wide as the text content plus padding */
+    /* Background only as wide as text */
 }
+
+/* ===================================== */
+/* ====== 7. BENEFITS SECTION ====== */
+/* ===================================== */
 
 .sec-beneficios {
     margin: 20px 0;
-    /* Vertical margin only, as the full width is desired */
     padding: 40px 20px;
-    /* More vertical padding for better spacing */
     background-color: #f4f5f7;
-    /* A slightly softer grey */
 }
-
-
-/* This is the title "Nossos beneficios" */
 
 .sec-beneficios h2 {
     text-align: center;
     font-size: 2.5rem;
     font-family: 'Montserrat', sans-serif;
-    /* Use the base family name */
     font-weight: 700;
-    /* Use font-weight to specify boldness */
     margin-bottom: 2rem;
-    /* More space below the title */
 }
-
-
-/* This is the flex container for all the cards */
 
 .benefícios {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    /* This creates a consistent space between cards */
 }
 
-
-/* This is the new, unified style for EVERY card */
-
+/* Card container */
 .beneficio-card {
     flex: 1;
-    /* Allows the card to grow */
     min-width: 280px;
-    /* Defines when the card should wrap to the next line */
     max-width: 350px;
-    /* Prevents the card from getting too wide on large screens */
     display: flex;
     flex-direction: column;
-    /* Stacks items vertically inside the card */
     align-items: center;
-    /* Centers items horizontally */
     text-align: center;
-    /* Centers the text (h3 and p) */
     transition: transform 0.2s ease;
-    /* Smooth transition for the hover effect */
 }
 
 .beneficio-card:hover {
     transform: scale(1.05);
-    /* The hover effect */
 }
 
-
-/* THIS IS THE NEW CONTAINER for the image, acting as a "mold" */
-
+/* Image container */
 .beneficio-imagem-container {
     height: 150px;
-    /* A fixed height for all image containers */
     margin-bottom: 1.5rem;
-    /* Space between the image and the title */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-/* This styles the image itself to fit inside the container */
-
+/* Image itself */
 .beneficio-imagem-container img {
     max-height: 100%;
-    /* The image will never be taller than the container */
     max-width: 100%;
-    /* The image will never be wider than the container */
     object-fit: contain;
-    /* This scales the image down to fit without distortion */
 }
 
-
-/* Styles for the card's title */
-
+/* Card title */
 .beneficio-card h3 {
     font-family: 'Montserrat', sans-serif;
-    /* Use the base family name */
     font-weight: 700;
     color: #ED0208;
     font-size: 1.3rem;
     margin-bottom: 1rem;
 }
 
-
-/* Styles for the card's paragraph */
-
+/* Card description */
 .beneficio-card p {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    /* Improves readability by increasing space between lines */
 }

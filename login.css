@@ -1,3 +1,5 @@
+/* ======================= FONT IMPORTS ======================= */
+/* Import custom fonts with different weights and styles */
 @font-face {
     font-family: 'Montserrat';
     src: url('fontes/Fontes/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
@@ -17,72 +19,65 @@
 
 @font-face {
     font-family: 'Lato';
-    src: url(fontes/Fontes/Lato/Lato-BoldItalic.ttf) format('truetype');
+    src: url('fontes/Fontes/Lato/Lato-BoldItalic.ttf') format('truetype');
 }
 
+
+/* ======================= GLOBAL RESETS ======================= */
 * {
     box-sizing: border-box;
-    /* Include the margin and padding in the total large of screen*/
+    /* Ensures padding and margin are included in the total element size */
 }
 
 body,
 html {
-    /*Use a hundred percent of the screen*/
-    margin: 0;
-    /* Remove default margin */
-    padding: 0;
-    /* Remove default padding */
-    width: 100%;
-    /* Ensure body takes full width */
+    margin: 0;                /* Remove browser default margin */
+    padding: 0;               /* Remove browser default padding */
+    width: 100%;              /* Full width */
 }
 
 body {
-    display: flex;
-    /*Use flexbox*/
+    display: flex;            /* Enable flexbox for centering */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    min-height: 100vh;        /* Full viewport height */
     background: linear-gradient(to top, red 0%, white 100%);
-    min-height: 100vh;
-    /* Prevent the body from being smaller than the viewport height */
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
 }
 
+
+/* ======================= LOGIN SECTION CONTAINER ======================= */
 .sec-login {
-    display: flex;
-    /*Use flexbox*/
-    background-color: white;
-    min-height: 70vh;
-    /* Ensure the section takes at least 70% of the viewport height */
-    max-height: 70vh;
-    /* Maximum height of 70% of the viewport height */
-    border-radius: 20px;
-    /* Rounded corners */
-    box-shadow: 2px 2px 10px rgb(0, 0, 0);
-    /* Subtle shadow for depth */
-    overflow: hidden;
+    display: flex;                        /* Flex layout for split screen */
+    background-color: white;              /* White card container */
+    min-height: 70vh;                     /* Minimum height */
+    max-height: 70vh;                     /* Prevent expansion */
+    border-radius: 20px;                  /* Rounded corners */
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);/* Soft shadow for depth */
+    overflow: hidden;                     /* Hide overflow edges */
 }
 
+
+/* ======================= RIGHT SIDE BOX ======================= */
 .login-box-right {
-    flex: 1;
-    display: flex;
+    flex: 1;                              /* Take up proportional space */
+    display: flex;                        /* Flexbox column layout */
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: center;              /* Center vertically */
+    align-items: center;                  /* Center horizontally */
+    text-align: center;                   /* Text aligned center */
     padding: 40px;
+    gap: 25px;                            /* Space between items */
     color: white;
     background: linear-gradient(to top right, #444444, #666666, #C00105);
-    gap: 25px;
 }
 
 .login-box-right img {
-    max-width: 150px;
+    max-width: 150px;                     /* Limit logo/image size */
 }
 
 .login-box-right h2 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
+    font-weight: 900;                     /* Boldest Montserrat */
     font-size: 2.5rem;
     line-height: 1.2;
     color: white;
@@ -91,90 +86,89 @@ body {
 
 .login-box-right p {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 30px;
-    max-width: 300px;
+    line-height: 1.6;                     /* Better readability */
+    color: rgba(255, 255, 255, 0.9);      /* Softer white */
     margin: 0;
+    max-width: 300px;                     /* Restrict paragraph width */
 }
 
+
+/* Call-to-action button on the right box */
 #Botão-criar-conta {
     display: inline-block;
     padding: 12px 35px;
     border: 2px solid white;
     border-radius: 25px;
-    color: white;
     background-color: transparent;
+    color: white;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease;            /* Smooth hover animation */
 }
 
 #Botão-criar-conta:hover {
     background-color: white;
-    color: #ED0208;
+    color: #ED0208;                       /* Strong red hover effect */
 }
 
+
+/* ======================= LEFT SIDE BOX ======================= */
 .login-box-left {
-    flex: 1.4;
-    /* Take up equal space */
-    padding: 40px 50px;
-    /* Padding around the content */
+    flex: 1.4;                            /* Slightly larger than right */
     display: flex;
-    /* Use flexbox */
-    flex-direction: column;
-    /* Stack children vertically */
-    justify-content: center;
-    /* Center children vertically */
+    flex-direction: column;               /* Stack items vertically */
+    justify-content: center;              /* Center vertically */
+    padding: 40px 50px;                   /* Inner spacing */
+}
+
+.login-box-left h2 {
+    font-family: 'Montserrat Bold';
+    font-size: 2rem;
+    color: #333;
+    text-align: left;
+    margin-bottom: 30px;
 }
 
 .login-box-left label {
-    display: block;
-    text-align: left;
+    display: block;                       /* Force labels to own line */
     margin-bottom: 8px;
+    text-align: left;
     font-family: 'Roboto';
-    color: #555;
     font-weight: 500;
+    color: #555;
 }
 
 .login-box-left input,
 .login-box-left select {
     display: block;
-    width: 100%;
+    width: 100%;                          /* Full width inputs */
     padding: 15px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
-    border-radius: 12px;
+    border-radius: 12px;                  /* Rounded inputs */
     font-size: 1rem;
     font-family: 'Roboto';
 }
 
+
+/* ======================= LEFT SIDE BUTTONS ======================= */
 .login-box-left button {
     width: 100%;
     padding: 12px;
+    margin-top: 10px;
     margin-bottom: 10px;
     border: none;
     border-radius: 12px;
-    background-color: #ED0208;
+    background-color: #ED0208;            /* Main red button */
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     cursor: pointer;
-    margin-top: 10px;
-    transition: 200ms;
+    transition: 200ms;                    /* Quick hover animation */
 }
 
 .login-box-left button:hover {
-    background-color: #700002;
+    background-color: #700002;            /* Darker red hover */
 }
-
-.login-box-left h2 {
-    font-family: 'Montserrat Bold';
-    color: #333;
-    font-size: 2rem;
-    text-align: left;
-    margin-bottom: 30px;
-}
-

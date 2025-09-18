@@ -6,43 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Território</title>
 
+    <!-- Link to main CSS file for dashboard styling -->
     <link rel="stylesheet" href="Território.css">
 
+    <!-- Importing Font Awesome library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- ===================================== -->
+    <!-- ====== 1. MAIN DASHBOARD WRAPPER ====== -->
+    <!-- ===================================== -->
     <div class="dashboard-container">
 
+        <!-- ===================================== -->
+        <!-- ====== 2. SIDEBAR (LEFT MENU) ====== -->
+        <!-- ===================================== -->
         <aside class="sidebar">
+            
+            <!-- Sidebar top section (usually contains logo/branding) -->
             <div class="sidebar-top">
                 <a href="#" class="sidebar-logo">
-
+                    <!-- Placeholder for the logo image -->
                 </a>
             </div>
+
+            <!-- Sidebar navigation with list of main pages -->
             <nav class="sidebar-nav">
                 <ul>
+                    <!-- Portfolio menu item -->
                     <li>
                         <a href="#"><i class="fas fa-briefcase"></i> Portfólio</a>
                     </li>
-                    <li class="active"> <a href="#"><i class="fas fa-chart-line"></i> Gestão CrossSell</a>
+
+                    <!-- Cross-Sell Management menu item (active state) -->
+                    <li class="active">
+                        <a href="#"><i class="fas fa-chart-line"></i> Gestão CrossSell</a>
                     </li>
+
+                    <!-- Client consultation menu item -->
                     <li>
                         <a href="#"><i class="fas fa-users"></i> Consulta Clientes</a>
                     </li>
                 </ul>
             </nav>
+
+            <!-- Sidebar footer note -->
             <p>Powered By Z</p>
         </aside>
 
+        <!-- ===================================== -->
+        <!-- ====== 3. MAIN WRAPPER (CONTENT) ====== -->
+        <!-- ===================================== -->
         <div class="main-wrapper">
 
+            <!-- =============================== -->
+            <!-- ====== 3.1 HEADER (TOPBAR) ====== -->
+            <!-- =============================== -->
             <header class="main-header">
                 <div class="header-left">
+                    <!-- Icon to toggle sidebar (useful for mobile) -->
                     <i class="fas fa-bars"></i>
                 </div>
                 <div class="header-right">
+                    <!-- User profile section with dropdown option -->
                     <div class="user-profile">
                         <p>Nome do Usuário</p>
                         <i class="fas fa-chevron-down"></i>
@@ -50,26 +78,37 @@
                 </div>
             </header>
 
+            <!-- ================================ -->
+            <!-- ====== 3.2 MAIN CONTENT AREA ====== -->
+            <!-- ================================ -->
             <main class="main-content">
 
+                <!-- ====== Welcome Section ====== -->
                 <section class="welcome-section">
                     <h1>Bem vindo ao Território</h1>
                     <p>Gerencie suas ações de Cross-Selling e acompanhe o status das pendências de forma eficiente.</p>
                 </section>
 
+                <!-- ====== Quick Actions Section ====== -->
                 <section class="actions-section">
                     <h2>Ações Rápidas</h2>
                     <div class="actions-grid">
+
+                        <!-- Card for individual Cross-Selling action -->
                         <div class="action-card">
                             <i class="fas fa-play-circle"></i>
                             <h3>Cross-Selling</h3>
                             <a href="indicacao.html">INICIAR &rarr;</a>
                         </div>
+
+                        <!-- Card for batch Cross-Selling -->
                         <div class="action-card">
                             <i class="fas fa-play-circle"></i>
                             <h3>Cross-Selling Lote</h3>
                             <a href="#">INICIAR &rarr;</a>
                         </div>
+
+                        <!-- Card for Document Control (DC) -->
                         <div class="action-card">
                             <i class="fas fa-play-circle"></i>
                             <h3>DC - Documento</h3>
@@ -78,17 +117,24 @@
                     </div>
                 </section>
 
+                <!-- ====== Pending Status Section ====== -->
                 <section class="status-section">
                     <h2>Status das Pendências</h2>
                     <div class="status-grid">
+
+                        <!-- User's pending tasks -->
                         <div class="status-card">
                             <p>3 minhas pendências</p>
                             <span>No prazo</span>
                         </div>
+
+                        <!-- Group pending tasks -->
                         <div class="status-card">
                             <p>1000 pendências do meu grupo</p>
                             <span>500 No prazo</span>
                         </div>
+
+                        <!-- Overdue tasks (highlighted as urgent) -->
                         <div class="status-card urgent">
                             <p>3000 pendências atrasadas</p>
                             <a href="#">ACESSAR +</a>
@@ -101,5 +147,4 @@
     </div>
 
 </body>
-
 </html>

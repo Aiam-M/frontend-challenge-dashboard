@@ -1,137 +1,116 @@
+/* ===================================== */
+/* ========== FORM SECTION ==============*/
+/* ===================================== */
+
 .form-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
 }
 
 .form-section h2 {
-    align-self: flex-start; /* Corrected from 'left' to 'flex-start' */
-    /*Overwrite the align-items*/
+    align-self: flex-start; /* Title aligns to the left, overriding parent center */
 }
 
+
+/* ===================================== */
+/* ========== FORM CONTAINER ============*/
+/* ===================================== */
+
 .form {
-    flex-direction: column;
     display: flex;
-    gap: 1.5rem;
-    width: 80%;
+    flex-direction: column; /* Arrange inputs in a vertical column */
+    gap: 1.5rem; /* Space between inputs */
+    width: 80%; /* Form width relative to container */
 }
 
 .form fieldset {
-    border: 1px solid rgb(124, 124, 124);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
+    border: 1px solid rgb(124, 124, 124); /* Light border for grouping */
+    padding: 1.5rem; /* Inner spacing */
+    border-radius: 0.5rem; /* Rounded corners */
 }
 
 .form legend {
-    color: red;
+    color: red; /* Highlighted title */
     font-weight: bold;
-    padding: 0.4rem;
+    padding: 0.4rem; /* Slight padding for better readability */
 }
 
 .form-group label {
-    color: red;
+    color: red; /* Red labels for consistency with brand color */
 }
 
+
 /* ===================================== */
-/* ====== INPUTS & FOCUS STYLES ====== */
+/* ====== INPUTS & FOCUS STYLES =========*/
 /* ===================================== */
+
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%;
-    background-color: #ffffff;
-    border: 1px solid #ccc; /* Added a default border for consistency */
-    border-radius: 0.3rem;
-    padding: 0.8rem 1rem; /* Increased padding for better spacing */
-    font-size: 1rem; /* Added a consistent font size */
-    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Added for smooth focus effect */
+    width: 100%; /* Full width of parent */
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ccc; /* Default border */
+    border-radius: 0.3rem; /* Slight rounded corners */
+    padding: 0.8rem 1rem; /* Inner spacing */
+    font-size: 1rem; /* Consistent text size */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
 }
 
-/* This is the new focus style for all text inputs, selects, and textareas */
+/* Input focus styles */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    outline: none; /* Removes the default browser outline */
-    border-color: #D9232D; /* Changes the border to your brand's red color */
-    box-shadow: 0 0 0 3px rgba(217, 35, 45, 0.2); /* Adds a subtle red "glow" */
+    outline: none; /* Remove browser’s default outline */
+    border-color: #D9232D; /* Brand red border */
+    box-shadow: 0 0 0 3px rgba(217, 35, 45, 0.2); /* Soft red glow */
 }
+
+
+/* ===================================== */
+/* ========== SMALL BUTTONS =============*/
+/* ===================================== */
 
 .form-group button {
     margin-top: 1rem;
-    width: 20%;
+    width: 20%; /* Small button width */
     background-color: red;
     color: white;
     padding: 0.5rem 0.8rem;
     border-radius: 0.3rem;
     cursor: pointer;
-    border: 2px solid red; /* Changed to use border instead of border-color */
-    transition: all 200ms; /* Simplified transition */
+    border: 2px solid red; /* Solid border */
+    transition: all 200ms; /* Smooth hover effect */
 }
 
 .form-group button:hover {
-    background-color: #9b0d0f;
+    background-color: #9b0d0f; /* Darker red on hover */
     border-color: #9b0d0f;
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight growth effect */
 }
 
-/* New focus style for the small button */
 .form-group button:focus {
     outline: none;
     border-color: #9b0d0f;
-    box-shadow: 0 0 0 3px rgba(217, 35, 45, 0.2);
+    box-shadow: 0 0 0 3px rgba(217, 35, 45, 0.2); /* Focus glow */
 }
+
+
+/* ===================================== */
+/* ====== CHECKBOX & RADIO GROUPS =======*/
+/* ===================================== */
 
 .checkbox-group {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.8rem; /* Space between checkbox and label */
     margin-bottom: 0.5rem;
-}
-
-.form button[type="submit"] {
-    background-color: red;
-    color: white;
-    width: 100%;
-    padding: 1rem 0px; /* Adjusted padding */
-    border-radius: 0.3rem;
-    cursor: pointer;
-    border: 2px solid red; /* Changed to use border instead of border-color */
-    transition: all 200ms; /* Simplified transition */
-    font-size: 1.1rem; /* Added for better visibility */
-    font-weight: bold; /* Added for emphasis */
-}
-
-.form button[type="submit"]:hover {
-    background-color: #9b0d0f;
-    border-color: #9b0d0f;
-    transform: scale(1.05);
-}
-
-/* New focus style for the main submit button */
-.form button[type="submit"]:focus {
-    outline: none;
-    border-color: #9b0d0f;
-    box-shadow: 0 0 0 3px rgba(217, 35, 45, 0.2);
-}
-
-.form-row {
-    display: flex;
-    gap: 1.5rem;
-    width: 100%;
-}
-
-.form-row .form-group {
-    flex: 1;
-}
-
-.form p {
-    font-weight: 500;
 }
 
 .radio-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Horizontal layout */
     align-items: center;
     gap: 1.5rem;
     padding-top: 0.5rem;
@@ -139,10 +118,59 @@
 
 .radio-group label {
     display: flex;
-    align-items: center;
-    cursor: pointer;
+    align-items: center; /* Align radio with text */
+    cursor: pointer; /* Makes labels clickable */
 }
 
 .radio-group input[type="radio"] {
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; /* Space between radio and text */
+}
+
+
+/* ===================================== */
+/* ========== SUBMIT BUTTON =============*/
+/* ===================================== */
+
+.form button[type="submit"] {
+    background-color: red;
+    color: white;
+    width: 100%; /* Full width button */
+    padding: 1rem 0px; /* Vertical spacing */
+    border-radius: 0.3rem;
+    cursor: pointer;
+    border: 2px solid red;
+    transition: all 200ms;
+    font-size: 1.1rem; /* Larger font */
+    font-weight: bold; /* Emphasis */
+}
+
+.form button[type="submit"]:hover {
+    background-color: #9b0d0f;
+    border-color: #9b0d0f;
+    transform: scale(1.05); /* Hover growth */
+}
+
+.form button[type="submit"]:focus {
+    outline: none;
+    border-color: #9b0d0f;
+    box-shadow: 0 0 0 3px rgba(217, 35, 45, 0.2);
+}
+
+
+/* ===================================== */
+/* ========== FORM LAYOUT ===============*/
+/* ===================================== */
+
+.form-row {
+    display: flex;
+    gap: 1.5rem; /* Space between columns */
+    width: 100%;
+}
+
+.form-row .form-group {
+    flex: 1; /* Each group takes equal space */
+}
+
+.form p {
+    font-weight: 500; /* Semi-bold text inside forms */
 }

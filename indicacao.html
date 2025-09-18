@@ -5,54 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indicação</title>
+
+    <!-- External CSS files -->
     <link rel="stylesheet" href="Território.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="indicacao.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- ======================= DASHBOARD LAYOUT ======================= -->
     <div class="dashboard-container">
+        
+        <!-- ======================= SIDEBAR ======================= -->
         <aside class="sidebar">
             <div class="sidebar-top">
-                <a href="#" class="sidebar-logo">
-
-                </a>
+                <!-- Company/brand logo placeholder -->
+                <a href="#" class="sidebar-logo"></a>
             </div>
+
+            <!-- Sidebar navigation menu -->
             <nav class="sidebar-nav">
                 <ul>
+                    <!-- Portfolio link -->
                     <li>
                         <a href="#"><i class="fas fa-briefcase"></i> Portfólio</a>
                     </li>
-                    <li class="active"> <a href="#"><i class="fas fa-chart-line"></i> Gestão CrossSell</a>
+
+                    <!-- Active section for CrossSell -->
+                    <li class="active">
+                        <a href="#"><i class="fas fa-chart-line"></i> Gestão CrossSell</a>
                     </li>
+
+                    <!-- Client consultation link -->
                     <li>
                         <a href="#"><i class="fas fa-users"></i> Consulta Clientes</a>
                     </li>
                 </ul>
             </nav>
+
+            <!-- Footer small info -->
             <p>Powered By Z</p>
         </aside>
+        <!-- ======================= END SIDEBAR ======================= -->
+
+
+        <!-- ======================= MAIN CONTENT ======================= -->
         <div class="main-wrapper">
+
+            <!-- ======================= HEADER ======================= -->
             <header class="main-header">
                 <div class="header-left">
+                    <!-- Sidebar toggle icon -->
                     <i class="fas fa-bars"></i>
                 </div>
                 <div class="header-right">
+                    <!-- User profile dropdown -->
                     <div class="user-profile">
                         <p>Nome do Usuário</p>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
             </header>
+            <!-- ======================= END HEADER ======================= -->
+
+
+            <!-- ======================= FORM SECTION ======================= -->
             <main class="main-content">
                 <section class="form-section">
                     <h2>Nova indicação de Cross-Selling</h2>
+
+                    <!-- Main form that redirects to "carregamento.html" after submit -->
                     <form class="form" action="carregamento.html">
+
+                        <!-- Requester information -->
                         <fieldset>
                             <legend>Solicitante</legend>
                             <p>Nome do usuário</p>
                         </fieldset>
+
+                        <!-- CNPJ validation and availability check -->
                         <fieldset>
                             <legend>Consulta de disponibilidade*</legend>
                             <div class="form-group">
@@ -62,14 +96,19 @@
                             </div>
                         </fieldset>
 
+                        <!-- Basic company registration -->
                         <fieldset>
                             <legend>Cadastro básico*</legend>
+
+                            <!-- Company name -->
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="razaoSocial">Razão Social*</label>
                                     <input type="text" name="razaoSocial" id="razaoSocial" required>
                                 </div>
                             </div>
+
+                            <!-- Address row -->
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="cep">CEP*</label>
@@ -80,6 +119,8 @@
                                     <input type="text" name="logradouro" id="logradouro" required>
                                 </div>
                             </div>
+
+                            <!-- Number and complement -->
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="numero">Número</label>
@@ -90,6 +131,8 @@
                                     <input type="text" name="complemento" id="complemento">
                                 </div>
                             </div>
+
+                            <!-- Neighborhood, city and state -->
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="bairro">Bairro</label>
@@ -135,6 +178,7 @@
                             </div>
                         </fieldset>
 
+                        <!-- Contact person information -->
                         <fieldset>
                             <legend>Contato*</legend>
                             <div class="form-row">
@@ -180,6 +224,8 @@
                                 </div>
                             </div>
                         </fieldset>
+
+                        <!-- Indication and selling options -->
                         <fieldset>
                             <legend>Indicação*</legend>
                             <div class="form-group">
@@ -205,6 +251,7 @@
                             </div>
                         </fieldset>
 
+                        <!-- Product options -->
                         <fieldset>
                             <legend>Selecione os produtos disponíveis*</legend>
                             <div class="checkbox-group">
@@ -221,13 +268,17 @@
                             </div>
                         </fieldset>
 
+                        <!-- Submit button -->
                         <button type="submit">Enviar</button>
                     </form>
                 </section>
             </main>
+            <!-- ======================= END FORM SECTION ======================= -->
+
         </div>
+        <!-- ======================= END MAIN CONTENT ======================= -->
     </div>
+    <!-- ======================= END DASHBOARD LAYOUT ======================= -->
 
 </body>
-
 </html>

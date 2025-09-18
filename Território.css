@@ -1,27 +1,29 @@
 /* ===================================== */
-/* ====== 1. ESTILOS GLOBAIS E VARIÁVEIS ====== */
+/* ========== 1. GLOBAL STYLES & VARIABLES ========== */
 /* ===================================== */
-
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* Color palette and global variables */
 :root {
-    --cor-principal: #D9232D; 
-    --cor-principal-hover: #b81c25;
-    --cor-fundo: #f4f5f7;
-    --cor-borda: #e2e2e2;
-    --cor-texto-principal: #333333;
-    --cor-texto-secundario: #777777;
-    --cor-branco: #FFFFFF;
-    --sombra-card: 0 4px 15px rgba(0, 0, 0, 0.07);
+    --cor-principal: #D9232D;             /* Primary brand color (red) */
+    --cor-principal-hover: #b81c25;       /* Darker red for hover states */
+    --cor-fundo: #f4f5f7;                 /* Light background color */
+    --cor-borda: #e2e2e2;                 /* Border color */
+    --cor-texto-principal: #333333;       /* Main text color */
+    --cor-texto-secundario: #777777;      /* Secondary text color */
+    --cor-branco: #FFFFFF;                /* White */
+    --sombra-card: 0 4px 15px rgba(0, 0, 0, 0.07); /* Shadow for cards */
 }
 
+/* Reset spacing and set border-box for consistent sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* General body styles */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--cor-fundo);
@@ -29,40 +31,45 @@ body {
 }
 
 /* ===================================== */
-/* ====== 2. LAYOUT PRINCIPAL ====== */
+/* ========== 2. MAIN LAYOUT ========== */
 /* ===================================== */
 
+/* Container for the dashboard layout */
 .dashboard-container {
     display: flex;
-    min-height: 100vh;
+    min-height: 100vh; /* Full viewport height */
 }
 
+/* Sidebar on the left */
 .sidebar {
     width: 260px;
     background-color: var(--cor-principal);
     color: var(--cor-branco);
     display: flex;
     flex-direction: column;
-    flex-shrink: 0; 
+    flex-shrink: 0; /* Prevents shrinking when resizing */
 }
 
+/* Wrapper for the main content on the right */
 .main-wrapper {
-    flex-grow: 1; 
+    flex-grow: 1; /* Expands to occupy all remaining space */
     display: flex;
     flex-direction: column;
 }
 
 /* ===================================== */
-/* ====== 3. ESTILOS DO MENU LATERAL ====== */
+/* ========== 3. SIDEBAR MENU ========== */
 /* ===================================== */
 
+/* Top area of the sidebar (usually logo or brand) */
 .sidebar-top {
     padding: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Navigation section inside the sidebar */
 .sidebar-nav {
-    flex-grow: 1; 
+    flex-grow: 1; /* Takes up all available vertical space */
 }
 
 .sidebar-nav ul {
@@ -70,10 +77,11 @@ body {
     padding-top: 20px;
 }
 
+/* Sidebar links */
 .sidebar-nav a {
     display: flex;
     align-items: center;
-    gap: 15px; 
+    gap: 15px; /* Space between icon and text */
     padding: 15px 20px;
     color: var(--cor-branco);
     text-decoration: none;
@@ -85,16 +93,19 @@ body {
     background-color: var(--cor-principal-hover);
 }
 
+/* Active state for the selected menu item */
 .sidebar-nav li.active a {
     background-color: var(--cor-branco);
     color: var(--cor-principal);
-    border-left: 4px solid #f0a04b; /* Um detalhe para o item ativo */
+    border-left: 4px solid #f0a04b; /* Accent detail for active item */
 }
 
+/* Sidebar icons size */
 .sidebar-nav i {
-    width: 20px; /* Alinha os ícones */
+    width: 20px; /* Ensures icons align consistently */
 }
 
+/* Footer of the sidebar */
 .sidebar-footer {
     padding: 20px;
     text-align: center;
@@ -107,10 +118,11 @@ body {
     font-weight: bold;
 }
 
+/* ===================================== */
+/* ========== 4. HEADER STYLES ========== */
+/* ===================================== */
 
-/* ===================================== */
-/* ====== 4. ESTILOS DO CABEÇALHO ====== */
-/* ===================================== */
+/* Main header above the content */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -121,12 +133,14 @@ body {
     flex-shrink: 0;
 }
 
+/* Sidebar toggle icon (hamburger), hidden on large screens */
 .header-left .fa-bars {
     font-size: 1.2rem;
     cursor: pointer;
-    display: none; /* Escondido em telas grandes */
+    display: none;
 }
 
+/* User profile section (avatar + username) */
 .user-profile {
     display: flex;
     align-items: center;
@@ -134,26 +148,30 @@ body {
     cursor: pointer;
 }
 
+/* User avatar */
 .user-profile img {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+    border-radius: 50%;  /* Makes it circular */
+    object-fit: cover;   /* Ensures image fits nicely */
 }
 
 /* ===================================== */
-/* ====== 5. ESTILOS DO CONTEÚDO PRINCIPAL ====== */
+/* ========== 5. MAIN CONTENT AREA ========== */
 /* ===================================== */
 
+/* Central area where dynamic content will appear */
 .main-content {
     padding: 40px;
-    overflow-y: auto; /* Permite rolagem se o conteúdo for grande */
+    overflow-y: auto; /* Allows scrolling if content overflows */
 }
 
+/* General section spacing */
 section {
     margin-bottom: 40px;
 }
 
+/* Titles */
 h1 {
     font-size: 1.8rem;
     margin-bottom: 10px;
@@ -166,20 +184,27 @@ h2 {
     padding-left: 10px;
 }
 
+/* Paragraph styling for intro/welcome text */
 .welcome-section p {
     color: var(--cor-texto-secundario);
     line-height: 1.6;
 }
 
-/* Usando Grid para os cards*/
-.actions-grid, .status-grid {
+/* ===================================== */
+/* ========== 6. GRID CARDS (ACTIONS & STATUS) ========== */
+/* ===================================== */
+
+/* Responsive grid for cards */
+.actions-grid, 
+.status-grid {
     display: grid;
-    /* Cria colunas que se ajustam ao tamanho da tela */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible columns */
     gap: 25px;
 }
 
-.action-card, .status-card {
+/* Generic card styles */
+.action-card, 
+.status-card {
     background-color: var(--cor-branco);
     padding: 25px;
     border-radius: 10px;
@@ -187,28 +212,33 @@ h2 {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Hover effect for action cards */
 .action-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Play icon inside action cards */
 .action-card .fa-play-circle {
     color: var(--cor-principal);
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
+/* Titles inside action cards */
 .action-card h3 {
     font-size: 1.1rem;
     margin-bottom: 15px;
 }
 
+/* Links inside action cards */
 .action-card a {
     color: var(--cor-principal);
     text-decoration: none;
     font-weight: 600;
 }
 
+/* Urgent status card with a red accent */
 .status-card.urgent {
     border-left: 4px solid #ff4d4d;
 }

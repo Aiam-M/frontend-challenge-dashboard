@@ -1,83 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
+    <!-- ========================= -->
+    <!-- BASIC PAGE CONFIGURATION -->
+    <!-- ========================= -->
     <meta charset="UTF-8">
+    <!-- Ensures responsiveness on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Edenred</title>
+    
+    <!-- Global stylesheet for general styles -->
     <link rel="stylesheet" href="global.css">
+    
+    <!-- Font Awesome icons (for hamburger menu and other icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
-
+    
+    <!-- ========================= -->
+    <!-- HEADER (LOGO + NAV MENU + LOGIN/SIGNUP) -->
+    <!-- ========================= -->
     <div class="cabeçalho">
-        <!-- cabeçalho para o site, com logo e menu -->
+        
+        <!-- Company logo -->
         <img src="Imagens/logo edenred.png" alt="Edenred" width="150" id="logo">
+        
+        <!-- Navigation menu -->
         <nav class="menu">
             <ul>
-                <li><a href="#Home">Home</a></li>
-                <!--Create a link to the id Home inthis same page-->
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#Home">Home</a></li> <!-- Scrolls to the "Home" section -->
+                <li><a href="#benefits">Benefits</a></li> <!-- Scrolls to the "Benefits" section -->
+                <li><a href="#about-us">About Us</a></li> <!-- Scrolls to the "About Us" section -->
+                <li><a href="#contact">Contact Us</a></li> <!-- Scrolls to the "Contact" section -->
             </ul>
         </nav>
-        <!-- "HAMBURGUINHOOO", Mineirinho Adventures -->
+        
+        <!-- Hamburger icon for mobile navigation -->
         <i class="fa-solid fa-bars" id="menu-icon"></i>
+        
+        <!-- Login and Sign Up buttons -->
         <div class="login">
             <a href="LoginEden.html" class="Botão">Login</a>
-            <hr id="Vlinha">
+            <hr id="Vlinha"> <!-- Vertical line separator between buttons -->
             <a href="SignUpEden.html" class="Botão">Sign Up</a>
         </div>
     </div>
+    
+    <!-- Thin horizontal separator line below the header -->
     <hr style="margin-bottom: 0;">
+    
+    <!-- ========================= -->
+    <!-- HERO / BANNER SECTION -->
+    <!-- ========================= -->
     <div class="Banner" id="Home">
         <div class="banner-content">
+            
+            <!-- Main headline -->
             <h1 class="textoBanner1">A parceira econômica que sua empresa precisa</h1>
+            
+            <!-- Subsections describing benefits for different company sizes -->
             <div class="textoBanner2">
+                
+                <!-- Small companies -->
                 <div class="subtituloBanner1">
                     <h2>Empresas pequenas:</h2>
                     <p>A certeza de que o dinheiro será usado do jeito certo, sem solicitações de reembolsos</p>
                 </div>
+                
+                <!-- Large companies -->
                 <div class="subtituloBanner2">
                     <h2>Empresas maiores:</h2>
-                    <p> A ferramenta de gestão ideal para parametrizar regras de uso </p>
+                    <p>A ferramenta de gestão ideal para parametrizar regras de uso</p>
                 </div>
             </div>
         </div>
     </div>
+    
+    <!-- ========================= -->
+    <!-- BENEFITS SECTION -->
+    <!-- ========================= -->
     <section class="sec-beneficios" id="benefits">
+        
+        <!-- Section title -->
         <h2>Nossos beneficios</h2>
+        
+        <!-- Container holding all benefit cards -->
         <div class="benefícios">
-
+            
+            <!-- Benefit card 1 -->
             <div class="beneficio-card">
                 <div class="beneficio-imagem-container">
                     <img src="Imagens/beneficios/Varinha_mágica-removebg-preview.png" alt="Eficiência e Simplificação">
                 </div>
                 <h3>Eficiência e Simplificação</h3>
-                <p>Gerencie todos os benefícios em uma única plataforma online, de forma rápida e intuitiva, liberando tempo para o que realmente importa: as pessoas.</p>
+                <p>
+                    Gerencie todos os benefícios em uma única plataforma online, 
+                    de forma rápida e intuitiva, liberando tempo para o que realmente importa: as pessoas.
+                </p>
             </div>
-
+            
+            <!-- Benefit card 2 -->
             <div class="beneficio-card">
                 <div class="beneficio-imagem-container">
                     <img src="Imagens/beneficios/Cifrão-removebg-preview.png" alt="Economia e controle">
                 </div>
                 <h3>Economia e controle</h3>
-                <p>Garanta que o dinheiro seja usado para o fim certo, sem desvios ou surpresas no orçamento, previsibilidade total dos custos.</p>
+                <p>
+                    Garanta que o dinheiro seja usado para o fim certo, sem desvios ou surpresas no orçamento, 
+                    previsibilidade total dos custos.
+                </p>
             </div>
-
+            
+            <!-- Benefit card 3 -->
             <div class="beneficio-card">
                 <div class="beneficio-imagem-container">
-                    <img src="Imagens/beneficios/Coração novo melhor.png" alt=" Satisfação e Retenção de Talentos">
+                    <img src="Imagens/beneficios/Coração novo melhor.png" alt="Satisfação e Retenção de Talentos">
                 </div>
-                <h3> Satisfação e Retenção de Talentos</h3>
-                <p>Ofereça os benefícios mais desejados pelos trabalhadores no Brasil. Mais liberdade de escolha e satisfação que se reflete diretamente na produtividade e em um melhor ambiente de trabalho.</p>
+                <h3>Satisfação e Retenção de Talentos</h3>
+                <p>
+                    Ofereça os benefícios mais desejados pelos trabalhadores no Brasil. 
+                    Mais liberdade de escolha e satisfação que se reflete diretamente na produtividade 
+                    e em um melhor ambiente de trabalho.
+                </p>
             </div>
-
+            
         </div>
     </section>
-
 </body>
-
 </html>
