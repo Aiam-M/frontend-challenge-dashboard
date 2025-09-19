@@ -58,9 +58,9 @@ A aplicação está hospedada e pode ser testada ao vivo através do GitHub Page
     <td align="center"><strong>Formulário de Indicação</strong></td>
   </tr>
   <tr>
-    <td><img src="./assets/login.png" alt="Tela de Login da aplicação"></td>
-    <td><img src="./assets/dashboard.png" alt="Dashboard principal da aplicação"></td>
-    <td><img src="./assets/indicacao.png" alt="Indicação de clientes"></td>
+    <td><img src="./Imagens/Print-git-eden/login.png" alt="Tela de Login da aplicação"></td>
+    <td><img src="./Imagens/Print-git-eden/dashboard.png" alt="Dashboard principal da aplicação"></td>
+    <td><img src="./Imagens/Print-git-eden/indicacao.png" alt="Indicação de clientes"></td>
   </tr>
 </table>
 
