@@ -103,7 +103,5 @@ Para executar este projeto na sua máquina, siga os passos abaixo:
 ## 🎯 Próximos Passos
 
 Este projeto é uma base sólida e o meu plano é continuar a evoluí-lo, implementando as seguintes funcionalidades:
-- [ ] **Integração com o Firestore:** Salvar os dados dos formulários de "Indicação" e "Carregamento" no banco de dados.
-- [ ] **Funcionalidade de Registo (Sign Up):** Finalizar o front-end da página de registo e conectá-la ao Firebase Auth.
 - [ ] **Refinamento da Responsividade:** Garantir que todos os componentes, incluindo os formulários, sejam 100% fluidos em dispositivos móveis.
 - [ ] **Feedback ao Utilizador:** Adicionar indicadores de carregamento (loading spinners) e mensagens de sucesso/erro mais elegantes.
