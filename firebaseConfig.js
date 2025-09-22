@@ -1,13 +1,13 @@
+// firebaseconfig.js
 
-// Import the functions you need from the SDKs you need
+// 1. Importa as funções que você precisa dos SDKs
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// ADICIONE A IMPORTAÇÃO DO FIRESTORE AQUI
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+// 2. A sua configuração do Firebase (suas chaves)
 const firebaseConfig = {
     apiKey: "AIzaSyCnuqopSKvSxfweZXWlOOMkX0QdMq8n-ks",
     authDomain: "edenred-desafio.firebaseapp.com",
@@ -18,7 +18,10 @@ const firebaseConfig = {
     measurementId: "G-VSGMN9870N"
 };
 
-// Initialize Firebase
+// 3. Inicializa o Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+// 4. Exporta os serviços que vamos usar na aplicação
 export const auth = getAuth(app);
+// COMPLETA A LINHA DO DB AQUI
+export const db = getFirestore(app);
